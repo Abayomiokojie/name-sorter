@@ -1,0 +1,21 @@
+{
+  "name": "name-sorter",
+  "version": "1.0.0",
+  "description": "Sorts a list of names by last name, then by given names",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abayomiokojie/name-sorter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Abayomiokojie/name-sorter/issues"
+  },
+  "homepage": "https://github.com/Abayomiokojie/name-sorter#readme"
+}
