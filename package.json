@@ -3,11 +3,22 @@
   "version": "1.0.0",
   "description": "Sorts a list of names by last name, then by given names",
   "main": "index.js",
+  "bin": {
+    "name-sorter": "bin/name-sorter.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "test": "node --test \"test/**/*.test.js\"",
     "test:unit": "node --test \"test/**/*.unit.test.js\"",
     "test:integration": "node --test \"test/**/*.integration.test.js\"",
-    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=src/** --test-coverage-include=bin/** --test-coverage-include=scripts/** \"test/**/*.test.js\""
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=src/** --test-coverage-include=bin/** --test-coverage-include=scripts/** \"test/**/*.test.js\"",
+    "check": "npm run build && npm test"
   },
   "repository": {
     "type": "git",
