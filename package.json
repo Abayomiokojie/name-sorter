@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "node --test \"test/**/*.test.js\"",
-    "test:unit": "node --test \"test/**/*.unit.test.js\""
+    "test:unit": "node --test \"test/**/*.unit.test.js\"",
+    "test:integration": "node --test \"test/**/*.integration.test.js\"",
+    "test:coverage": "node --test --experimental-test-coverage --test-coverage-include=src/** --test-coverage-include=bin/** --test-coverage-include=scripts/** \"test/**/*.test.js\""
   },
   "repository": {
     "type": "git",
