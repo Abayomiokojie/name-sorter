@@ -22,7 +22,7 @@ class FileNameWriter {
   /**
    * Writes a temporary file, then renames it over the destination.
    * Cleanup always runs, but can fail after the destination has already changed.
-   * This protects against partial writes, not power loss or concurrent writers..
+   * This protects against partial writes, not power loss or concurrent writers.
    * @param {PersonName[]} names
    * @returns {Promise<void>}
    */

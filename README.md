@@ -86,6 +86,13 @@ node scripts/check-sorted.js ./unsorted-names-list.txt ./sorted-names-list.txt
 
 Checks that every name, including duplicates, is preserved and correctly ordered. Prints a success message or explains the failure. It also returns an exit code for scripts and CI: 0 means success; 1 means failure. This optional developer tool reuses the application's comparator; independent expected-output fixtures remain the separate check of sorting rules. It does not generate names or run as part of the sorting command.
 
-## CI
+## CI - Build and test pipeline
 
-[GitHub Actions](.github/workflows/ci.yml) checks syntax, runs the assessment tests with coverage, and installs the local package to verify the actual `name-sorter` command on Linux and Windows with Node 22 and 24. It checks both stdout and the saved file against the sample fixture. The independent 1,000-name fixture runs in the normal test suite.
+[GitHub Actions](.github/workflows/ci.yml)
+On pushes and pull requests, the pipeline runs the build and test steps on Linux and Windows with Node.js 22 and 24. It can also be started manually.
+
+- **Build:** `npm run build` checks JavaScript syntax; this project requires no compilation.
+- **Test:** `npm run test:coverage` runs unit and integration tests, including the independent 1,000-name fixture, and reports coverage.
+- **Command verification:** installs the packaged application and checks that `name-sorter` produces the expected stdout and saved file for the assessment sample.
+
+It checks both stdout and the saved file against the sample fixture. The independent 1,000-name fixture runs in the normal test suite.
